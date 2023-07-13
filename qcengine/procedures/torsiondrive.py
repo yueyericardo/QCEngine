@@ -181,7 +181,7 @@ class TorsionDriveProcedure(ProcedureHarness):
         input_molecule = Molecule.from_data(input_molecule)
 
         dihedrals = input_model.keywords.dihedrals
-        angles = grid_point.split()
+        angles = grid_point.split(",")
 
         keywords = {
             **input_model.optimization_spec.keywords,

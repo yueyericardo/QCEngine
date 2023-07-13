@@ -80,7 +80,7 @@ class TorchANIHarness(ProgramHarness):
             ani_models["ani2x"] = torchani.models.ANI2x
 
         try:
-            self._CACHE[name] = ani_models[name]()
+            self._CACHE[name] = ani_models[name](periodic_table_index=False)
         except KeyError:
             raise InputError(f"TorchANI only accepts methods: {ani_models.keys()}")
 
